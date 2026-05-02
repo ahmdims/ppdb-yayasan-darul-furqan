@@ -123,10 +123,20 @@ if (contactForm) {
 }
 
 // Admin sidebar toggle
-const sidebarToggle = document.getElementById('sidebarToggle');
-const adminSidebar  = document.getElementById('adminSidebar');
+const sidebarToggle   = document.getElementById('sidebarToggle');
+const adminSidebar    = document.getElementById('adminSidebar');
+const sidebarOverlay  = document.getElementById('sidebarOverlay');
 if (sidebarToggle && adminSidebar) {
-  sidebarToggle.addEventListener('click', () => { adminSidebar.classList.toggle('open'); });
+  sidebarToggle.addEventListener('click', () => {
+    adminSidebar.classList.toggle('open');
+    if (sidebarOverlay) sidebarOverlay.classList.toggle('show');
+  });
+  if (sidebarOverlay) {
+    sidebarOverlay.addEventListener('click', () => {
+      adminSidebar.classList.remove('open');
+      sidebarOverlay.classList.remove('show');
+    });
+  }
 }
 
 // Smooth page entrance
