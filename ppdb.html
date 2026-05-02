@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PPDB Online 2025 — Darul Furqan Pariaman</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/logo.png" class="brand-logo-img" alt="Logo Darul Furqan" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="ppdb.html" class="nav-highlight active">PPDB 2025</a></li>
+        <li><a href="berita.html">Berita</a></li>
+        <li><a href="galeri.html">Galeri</a></li>
+        <li><a href="prestasi.html">Prestasi</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="container page-hero-content">
+      <div class="page-hero-breadcrumb"><a href="index.html">Beranda</a><span>/</span><span>PPDB Online</span></div>
+      <div class="ppdb-badge" style="margin-bottom:.75rem;">PPDB 2025/2026 DIBUKA!</div>
+      <h1>Pendaftaran Siswa <span class="text-gradient">Baru Online</span></h1>
+      <p>Daftarkan putra-putri terbaik Anda secara mudah dan cepat melalui sistem PPDB online kami. Batas pendaftaran: <strong style="color:var(--primary-light);">30 Juni 2025</strong></p>
+    </div>
+  </section>
+
+  <!-- INFO PPDB -->
+  <section class="section-light">
+    <div class="container">
+      <!-- TABS: Daftar vs Cek Status -->
+      <div class="tabs-wrapper" id="ppdbTabs">
+        <div class="tabs-nav" style="margin-bottom:2rem;">
+          <button class="tab-btn active" data-tab="ppdb-daftar">Formulir Pendaftaran</button>
+          <button class="tab-btn" data-tab="ppdb-status" id="cek-status">Cek Status Pendaftaran</button>
+          <button class="tab-btn" data-tab="ppdb-info">Informasi PPDB</button>
+        </div>
+
+        <!-- FORM PENDAFTARAN -->
+        <div class="tab-content active" id="ppdb-daftar">
+          <!-- Step Indicator -->
+          <div class="steps-nav">
+            <div class="step-item active">
+              <div class="step-dot">1</div>
+              <div class="step-label">Data Siswa</div>
+            </div>
+            <div class="step-item">
+              <div class="step-dot">2</div>
+              <div class="step-label">Data Orang Tua</div>
+            </div>
+            <div class="step-item">
+              <div class="step-dot">3</div>
+              <div class="step-label">Dokumen</div>
+            </div>
+            <div class="step-item">
+              <div class="step-dot">4</div>
+              <div class="step-label">Konfirmasi</div>
+            </div>
+          </div>
+
+          <form id="ppdbForm">
+            <!-- Step 1: Data Siswa -->
+            <div class="form-step">
+              <div class="form-card">
+                <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:1.5rem;padding-bottom:.75rem;border-bottom:1px solid #e2e8f0;">Data Calon Siswa</h3>
+                <div class="form-grid-2">
+                  <div class="form-group full-width">
+                    <label class="form-label">Program yang Dituju <span>*</span></label>
+                    <select class="form-select" required>
+                      <option value="">— Pilih Program —</option>
+                      <option value="PAUD">PAUD Darul Furqan</option>
+                      <option value="SDIT">SDIT Alam Darul Furqan</option>
+                      <option value="PONPES">Pondok Pesantren Darul Furqan</option>
+                    </select>
+                  </div>
+                  <div class="form-group full-width">
+                    <label class="form-label">Nama Lengkap Calon Siswa <span>*</span></label>
+                    <input type="text" class="form-input" placeholder="Nama sesuai akta kelahiran" required/>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Jenis Kelamin <span>*</span></label>
+                    <select class="form-select" required>
+                      <option value="">— Pilih —</option>
+                      <option value="L">Laki-laki</option>
+                      <option value="P">Perempuan</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Agama <span>*</span></label>
+                    <select class="form-select" required>
+                      <option value="Islam">Islam</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Tempat Lahir <span>*</span></label>
+                    <input type="text" class="form-input" placeholder="Contoh: Pariaman" required/>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Tanggal Lahir <span>*</span></label>
+                    <input type="date" class="form-input" required/>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Anak Ke- <span>*</span></label>
+                    <input type="number" class="form-input" placeholder="1" min="1" required/>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Asal Sekolah Sebelumnya</label>
+                    <input type="text" class="form-input" placeholder="Kosongkan jika belum sekolah"/>
+                  </div>
+                  <div class="form-group full-width">
+                    <label class="form-label">Alamat Lengkap <span>*</span></label>
+                    <textarea class="form-textarea" placeholder="Jl. ..." required></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2: Data Orang Tua -->
+            <div class="form-step" style="display:none;">
+              <div class="form-card">
+                <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:1.5rem;padding-bottom:.75rem;border-bottom:1px solid #e2e8f0;">Data Orang Tua / Wali</h3>
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label class="form-label">Nama Ayah <span>*</span></label>
+                    <input type="text" class="form-input" placeholder="Nama lengkap ayah" required/>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Nama Ibu <span>*</span></label>
+                    <input type="text" class="form-input" placeholder="Nama lengkap ibu" required/>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Pekerjaan Ayah</label>
+                    <input type="text" class="form-input" placeholder="Contoh: Wiraswasta"/>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Pekerjaan Ibu</label>
+                    <input type="text" class="form-input" placeholder="Contoh: Ibu Rumah Tangga"/>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Pendidikan Terakhir Ayah</label>
+                    <select class="form-select">
+                      <option>SD</option><option>SMP</option><option>SMA</option>
+                      <option>D3</option><option selected>S1</option><option>S2</option><option>S3</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Pendidikan Terakhir Ibu</label>
+                    <select class="form-select">
+                      <option>SD</option><option>SMP</option><option>SMA</option>
+                      <option>D3</option><option selected>S1</option><option>S2</option><option>S3</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Nomor Telepon / WhatsApp <span>*</span></label>
+                    <input type="tel" class="form-input" placeholder="08xx-xxxx-xxxx" required/>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Email Orang Tua</label>
+                    <input type="email" class="form-input" placeholder="email@contoh.com"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Dokumen -->
+            <div class="form-step" style="display:none;">
+              <div class="form-card">
+                <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:.5rem;padding-bottom:.75rem;border-bottom:1px solid #e2e8f0;">Unggah Dokumen</h3>
+                <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1.5rem;">Format yang diterima: JPG, PNG, PDF. Ukuran maksimal: 2 MB per file.</p>
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label class="form-label">Akta Kelahiran <span>*</span></label>
+                    <input type="file" class="form-file" accept=".jpg,.png,.pdf" required/>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Kartu Keluarga <span>*</span></label>
+                    <input type="file" class="form-file" accept=".jpg,.png,.pdf" required/>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">KTP Orang Tua <span>*</span></label>
+                    <input type="file" class="form-file" accept=".jpg,.png,.pdf" required/>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Foto Calon Siswa 3×4 <span>*</span></label>
+                    <input type="file" class="form-file" accept=".jpg,.png" required/>
+                    <div class="form-hint">Latar belakang merah, pakaian rapi</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 4: Konfirmasi -->
+            <div class="form-step" style="display:none;">
+              <div class="form-card">
+                <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:1.5rem;">Konfirmasi Pendaftaran</h3>
+                <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:1.25rem;margin-bottom:1.5rem;">
+                  <p style="font-size:.9rem;font-weight:600;color:#065f46;margin-bottom:.5rem;">Persyaratan & Ketentuan PPDB</p>
+                  <ul style="font-size:.85rem;color:#047857;list-style:disc;padding-left:1.25rem;display:flex;flex-direction:column;gap:.3rem;">
+                    <li>Data yang diisikan harus sesuai dengan dokumen resmi</li>
+                    <li>Dokumen yang diunggah harus terbaca dengan jelas</li>
+                    <li>Pendaftaran bersifat final setelah disubmit</li>
+                    <li>Keputusan penerimaan sepenuhnya menjadi kewenangan pihak sekolah</li>
+                    <li>Nomor pendaftaran akan dikirim via WhatsApp</li>
+                  </ul>
+                </div>
+                <div style="display:flex;align-items:flex-start;gap:.75rem;font-size:.9rem;">
+                  <input type="checkbox" id="agree" style="margin-top:.2rem;accent-color:var(--primary);width:16px;height:16px;" required/>
+                  <label for="agree" style="cursor:pointer;">Saya menyatakan bahwa data yang diisikan adalah <strong>benar dan akurat</strong>, serta menyetujui syarat dan ketentuan PPDB Yayasan Darul Furqan Pariaman.</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div style="display:flex;justify-content:space-between;margin-top:1.5rem;gap:1rem;">
+              <button type="button" class="btn btn-outline" id="prevBtn" style="border-color:#e2e8f0;color:var(--text-muted);">← Sebelumnya</button>
+              <button type="button" class="btn btn-primary" id="nextBtn">Selanjutnya →</button>
+              <button type="submit" class="btn btn-primary" id="submitBtn" style="display:none;">Kirim Pendaftaran</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- CEK STATUS -->
+        <div class="tab-content" id="ppdb-status">
+          <div class="form-card" style="max-width:500px;margin:0 auto;">
+            <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:.5rem;">Cek Status Pendaftaran</h3>
+            <p style="font-size:.88rem;color:var(--text-muted);margin-bottom:1.5rem;">Masukkan nomor pendaftaran yang Anda terima via WhatsApp.</p>
+            <form id="statusCheckForm">
+              <div class="form-group" style="margin-bottom:1rem;">
+                <label class="form-label">Nomor Pendaftaran <span>*</span></label>
+                <input type="text" class="form-input" id="noPendaftaran" placeholder="Contoh: DF-2025-SDIT-0001" required/>
+                <div class="form-hint">Format: DF-TAHUN-PROGRAM-NOMER (contoh: DF-2025-SDIT-0001)</div>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Cek Status</button>
+            </form>
+            <div class="status-result" id="statusResult"></div>
+          </div>
+        </div>
+
+        <!-- INFO PPDB -->
+        <div class="tab-content" id="ppdb-info">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;">
+            <div class="form-card">
+              <div style="margin-bottom:.75rem;color:var(--primary)"><svg class="icon-xl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.75 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM7.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM8.25 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM9.75 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM10.5 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM12.75 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM14.25 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"/><path fill-rule="evenodd" d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z" clip-rule="evenodd"/></svg></div>
+              <h3 style="font-size:1rem;font-weight:700;margin-bottom:1rem;">Jadwal PPDB 2025/2026</h3>
+              <table style="width:100%;font-size:.85rem;border-collapse:collapse;">
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                  <td style="padding:.5rem 0;color:var(--text-muted);">Buka Pendaftaran</td>
+                  <td style="padding:.5rem 0;font-weight:600;text-align:right;">1 Mei 2025</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                  <td style="padding:.5rem 0;color:var(--text-muted);">Tutup Pendaftaran</td>
+                  <td style="padding:.5rem 0;font-weight:600;text-align:right;">30 Juni 2025</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                  <td style="padding:.5rem 0;color:var(--text-muted);">Pengumuman</td>
+                  <td style="padding:.5rem 0;font-weight:600;text-align:right;">15 Juli 2025</td>
+                </tr>
+                <tr>
+                  <td style="padding:.5rem 0;color:var(--text-muted);">Daftar Ulang</td>
+                  <td style="padding:.5rem 0;font-weight:600;text-align:right;">16–20 Juli 2025</td>
+                </tr>
+              </table>
+            </div>
+            <div class="form-card">
+              <div style="margin-bottom:.75rem;color:var(--primary)"><svg class="icon-xl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M10.5 3A1.501 1.501 0 0 0 9 4.5h6A1.5 1.5 0 0 0 13.5 3h-3Zm-2.693.178A3 3 0 0 1 10.5 1.5h3a3 3 0 0 1 2.694 1.678c.497.042.992.092 1.486.15 1.497.173 2.57 1.46 2.57 2.929V19.5a3 3 0 0 1-3 3H6.75a3 3 0 0 1-3-3V6.257c0-1.47 1.073-2.756 2.57-2.93.493-.057.989-.107 1.487-.15Z" clip-rule="evenodd"/></svg></div>
+              <h3 style="font-size:1rem;font-weight:700;margin-bottom:1rem;">Persyaratan Umum</h3>
+              <ul style="display:flex;flex-direction:column;gap:.5rem;font-size:.85rem;">
+                <li style="display:flex;gap:.5rem;"><span style="color:var(--primary);font-weight:700;">✓</span> Fotokopi Akta Kelahiran</li>
+                <li style="display:flex;gap:.5rem;"><span style="color:var(--primary);font-weight:700;">✓</span> Fotokopi Kartu Keluarga</li>
+                <li style="display:flex;gap:.5rem;"><span style="color:var(--primary);font-weight:700;">✓</span> Fotokopi KTP Orang Tua</li>
+                <li style="display:flex;gap:.5rem;"><span style="color:var(--primary);font-weight:700;">✓</span> Foto 3×4 latar merah (3 lembar)</li>
+                <li style="display:flex;gap:.5rem;"><span style="color:var(--primary);font-weight:700;">✓</span> Ijazah/SKTL (untuk SDIT & Ponpes)</li>
+              </ul>
+            </div>
+            <div class="form-card">
+              <div style="margin-bottom:.75rem;color:var(--primary)"><svg class="icon-xl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 2.25a.75.75 0 0 0 0 1.5v16.5h-.75a.75.75 0 0 0 0 1.5h16.5a.75.75 0 0 0 0-1.5h-.75V3.75a.75.75 0 0 0 0-1.5h-15ZM9 6a.75.75 0 0 0 0 1.5h1.5a.75.75 0 0 0 0-1.5H9Zm-.75 3.75A.75.75 0 0 1 9 9h1.5a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75ZM9 12a.75.75 0 0 0 0 1.5h1.5a.75.75 0 0 0 0-1.5H9Zm3.75-5.25A.75.75 0 0 1 13.5 6H15a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1-.75-.75ZM13.5 9a.75.75 0 0 0 0 1.5H15A.75.75 0 0 0 15 9h-1.5Zm-.75 3.75a.75.75 0 0 1 .75-.75H15a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1-.75-.75ZM9 19.5v-2.25a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-.75.75h-4.5A.75.75 0 0 1 9 19.5Z" clip-rule="evenodd"/></svg></div>
+              <h3 style="font-size:1rem;font-weight:700;margin-bottom:1rem;">Kuota Penerimaan</h3>
+              <ul style="display:flex;flex-direction:column;gap:.75rem;font-size:.88rem;">
+                <li style="display:flex;justify-content:space-between;align-items:center;">
+                  <span>PAUD</span>
+                  <span style="background:rgba(5,150,105,.1);color:var(--primary-dark);padding:.2rem .65rem;border-radius:99px;font-weight:700;">30 Siswa</span>
+                </li>
+                <li style="display:flex;justify-content:space-between;align-items:center;">
+                  <span>SDIT Alam</span>
+                  <span style="background:rgba(5,150,105,.1);color:var(--primary-dark);padding:.2rem .65rem;border-radius:99px;font-weight:700;">60 Siswa</span>
+                </li>
+                <li style="display:flex;justify-content:space-between;align-items:center;">
+                  <span>Pondok Pesantren</span>
+                  <span style="background:rgba(5,150,105,.1);color:var(--primary-dark);padding:.2rem .65rem;border-radius:99px;font-weight:700;">40 Santri</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="footer-brand">
+            <img src="assets/logo.png" class="brand-logo-img" alt="Logo Darul Furqan" />
+          </div>
+          <p class="footer-tagline">Membentuk generasi cerdas, berakhlak mulia, dan berdaya saing untuk masa depan bangsa.</p>
+          <div class="footer-social">
+            <a href="#" class="social-btn" aria-label="Instagram"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" class="social-btn" aria-label="Facebook"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+            <a href="#" class="social-btn" aria-label="WhatsApp"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Navigasi</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="profil.html">Profil Sekolah</a></li>
+            <li><a href="ppdb.html">PPDB Online</a></li>
+            <li><a href="berita.html">Berita &amp; Artikel</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="prestasi.html">Prestasi</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Program</h4>
+          <ul class="footer-links">
+            <li><a href="profil.html#program">PAUD Darul Furqan</a></li>
+            <li><a href="profil.html#program">SDIT Alam</a></li>
+            <li><a href="profil.html#program">Pondok Pesantren</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Kontak</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-2.003 3.5-4.697 3.5-8.327a8 8 0 0 0-16 0c0 3.63 1.556 6.326 3.5 8.327a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742Z" clip-rule="evenodd"/></svg>
+              <span>Jl. Raya Pariaman, Kota Pariaman, Sumatera Barat</span>
+            </li>
+            <li>
+              <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clip-rule="evenodd"/></svg>
+              <span>0751-XXXXX</span>
+            </li>
+            <li>
+              <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z"/><path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z"/></svg>
+              <span>info@darulfurqan.sch.id</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&#169; 2025 Yayasan Darul Furqan Pariaman. Semua hak dilindungi.</p>
+        <a href="admin/login.html" class="footer-admin-link">Admin Panel</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>
