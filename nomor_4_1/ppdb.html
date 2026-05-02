@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PPDB Online 2025 — Darul Furqan Pariaman</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-logo">DF</div>
+        <div><div class="brand-name">Darul Furqan</div><div class="brand-sub">Pariaman</div></div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="ppdb.html" class="nav-highlight active">PPDB 2025</a></li>
+        <li><a href="berita.html">Berita</a></li>
+        <li><a href="galeri.html">Galeri</a></li>
+        <li><a href="prestasi.html">Prestasi</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="container page-hero-content">
+      <div class="page-hero-breadcrumb"><a href="index.html">Beranda</a><span>/</span><span>PPDB Online</span></div>
+      <div class="ppdb-badge" style="margin-bottom:.75rem;">🎉 PPDB 2025/2026 DIBUKA!</div>
+      <h1>Pendaftaran Siswa <span class="text-gradient">Baru Online</span></h1>
+      <p>Daftarkan putra-putri terbaik Anda secara mudah dan cepat melalui sistem PPDB online kami. Batas pendaftaran: <strong style="color:var(--primary-light);">30 Juni 2025</strong></p>
+    </div>
+  </section>
+
+  <!-- INFO PPDB -->
+  <section class="section-light">
+    <div class="container">
+      <!-- TABS: Daftar vs Cek Status -->
+      <div class="tabs-wrapper" id="ppdbTabs">
+        <div class="tabs-nav" style="margin-bottom:2rem;">
+          <button class="tab-btn active" data-tab="ppdb-daftar">📝 Formulir Pendaftaran</button>
+          <button class="tab-btn" data-tab="ppdb-status" id="cek-status">🔍 Cek Status Pendaftaran</button>
+          <button class="tab-btn" data-tab="ppdb-info">ℹ️ Informasi PPDB</button>
+        </div>
+
+        <!-- FORM PENDAFTARAN -->
+        <div class="tab-content active" id="ppdb-daftar">
+          <!-- Step Indicator -->
+          <div class="steps-nav">
+            <div class="step-item active">
+              <div class="step-dot">1</div>
+              <div class="step-label">Data Siswa</div>
+            </div>
+            <div class="step-item">
+              <div class="step-dot">2</div>
+              <div class="step-label">Data Orang Tua</div>
+            </div>
+            <div class="step-item">
+              <div class="step-dot">3</div>
+              <div class="step-label">Dokumen</div>
+            </div>
+            <div class="step-item">
+              <div class="step-dot">4</div>
+              <div class="step-label">Konfirmasi</div>
+            </div>
+          </div>
+
+          <form id="ppdbForm">
+            <!-- Step 1: Data Siswa -->
+            <div class="form-step">
+              <div class="form-card">
+                <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:1.5rem;padding-bottom:.75rem;border-bottom:1px solid #e2e8f0;">📋 Data Calon Siswa</h3>
+                <div class="form-grid-2">
+                  <div class="form-group full-width">
+                    <label class="form-label">Program yang Dituju <span>*</span></label>
+                    <select class="form-select" required>
+                      <option value="">— Pilih Program —</option>
+                      <option value="PAUD">PAUD Darul Furqan</option>
+                      <option value="SDIT">SDIT Alam Darul Furqan</option>
+                      <option value="PONPES">Pondok Pesantren Darul Furqan</option>
+                    </select>
+                  </div>
+                  <div class="form-group full-width">
+                    <label class="form-label">Nama Lengkap Calon Siswa <span>*</span></label>
+                    <input type="text" class="form-input" placeholder="Nama sesuai akta kelahiran" required/>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Jenis Kelamin <span>*</span></label>
+                    <select class="form-select" required>
+                      <option value="">— Pilih —</option>
+                      <option value="L">Laki-laki</option>
+                      <option value="P">Perempuan</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Agama <span>*</span></label>
+                    <select class="form-select" required>
+                      <option value="Islam">Islam</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Tempat Lahir <span>*</span></label>
+                    <input type="text" class="form-input" placeholder="Contoh: Pariaman" required/>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Tanggal Lahir <span>*</span></label>
+                    <input type="date" class="form-input" required/>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Anak Ke- <span>*</span></label>
+                    <input type="number" class="form-input" placeholder="1" min="1" required/>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Asal Sekolah Sebelumnya</label>
+                    <input type="text" class="form-input" placeholder="Kosongkan jika belum sekolah"/>
+                  </div>
+                  <div class="form-group full-width">
+                    <label class="form-label">Alamat Lengkap <span>*</span></label>
+                    <textarea class="form-textarea" placeholder="Jl. ..." required></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2: Data Orang Tua -->
+            <div class="form-step" style="display:none;">
+              <div class="form-card">
+                <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:1.5rem;padding-bottom:.75rem;border-bottom:1px solid #e2e8f0;">👨‍👩‍👧 Data Orang Tua / Wali</h3>
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label class="form-label">Nama Ayah <span>*</span></label>
+                    <input type="text" class="form-input" placeholder="Nama lengkap ayah" required/>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Nama Ibu <span>*</span></label>
+                    <input type="text" class="form-input" placeholder="Nama lengkap ibu" required/>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Pekerjaan Ayah</label>
+                    <input type="text" class="form-input" placeholder="Contoh: Wiraswasta"/>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Pekerjaan Ibu</label>
+                    <input type="text" class="form-input" placeholder="Contoh: Ibu Rumah Tangga"/>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Pendidikan Terakhir Ayah</label>
+                    <select class="form-select">
+                      <option>SD</option><option>SMP</option><option>SMA</option>
+                      <option>D3</option><option selected>S1</option><option>S2</option><option>S3</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Pendidikan Terakhir Ibu</label>
+                    <select class="form-select">
+                      <option>SD</option><option>SMP</option><option>SMA</option>
+                      <option>D3</option><option selected>S1</option><option>S2</option><option>S3</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Nomor Telepon / WhatsApp <span>*</span></label>
+                    <input type="tel" class="form-input" placeholder="08xx-xxxx-xxxx" required/>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Email Orang Tua</label>
+                    <input type="email" class="form-input" placeholder="email@contoh.com"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Dokumen -->
+            <div class="form-step" style="display:none;">
+              <div class="form-card">
+                <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:.5rem;padding-bottom:.75rem;border-bottom:1px solid #e2e8f0;">📂 Unggah Dokumen</h3>
+                <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1.5rem;">Format yang diterima: JPG, PNG, PDF. Ukuran maksimal: 2 MB per file.</p>
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label class="form-label">Akta Kelahiran <span>*</span></label>
+                    <input type="file" class="form-file" accept=".jpg,.png,.pdf" required/>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Kartu Keluarga <span>*</span></label>
+                    <input type="file" class="form-file" accept=".jpg,.png,.pdf" required/>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">KTP Orang Tua <span>*</span></label>
+                    <input type="file" class="form-file" accept=".jpg,.png,.pdf" required/>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Foto Calon Siswa 3×4 <span>*</span></label>
+                    <input type="file" class="form-file" accept=".jpg,.png" required/>
+                    <div class="form-hint">Latar belakang merah, pakaian rapi</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 4: Konfirmasi -->
+            <div class="form-step" style="display:none;">
+              <div class="form-card">
+                <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:1.5rem;">✅ Konfirmasi Pendaftaran</h3>
+                <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:1.25rem;margin-bottom:1.5rem;">
+                  <p style="font-size:.9rem;font-weight:600;color:#065f46;margin-bottom:.5rem;">Persyaratan & Ketentuan PPDB</p>
+                  <ul style="font-size:.85rem;color:#047857;list-style:disc;padding-left:1.25rem;display:flex;flex-direction:column;gap:.3rem;">
+                    <li>Data yang diisikan harus sesuai dengan dokumen resmi</li>
+                    <li>Dokumen yang diunggah harus terbaca dengan jelas</li>
+                    <li>Pendaftaran bersifat final setelah disubmit</li>
+                    <li>Keputusan penerimaan sepenuhnya menjadi kewenangan pihak sekolah</li>
+                    <li>Nomor pendaftaran akan dikirim via WhatsApp</li>
+                  </ul>
+                </div>
+                <div style="display:flex;align-items:flex-start;gap:.75rem;font-size:.9rem;">
+                  <input type="checkbox" id="agree" style="margin-top:.2rem;accent-color:var(--primary);width:16px;height:16px;" required/>
+                  <label for="agree" style="cursor:pointer;">Saya menyatakan bahwa data yang diisikan adalah <strong>benar dan akurat</strong>, serta menyetujui syarat dan ketentuan PPDB Yayasan Darul Furqan Pariaman.</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div style="display:flex;justify-content:space-between;margin-top:1.5rem;gap:1rem;">
+              <button type="button" class="btn btn-outline" id="prevBtn" style="border-color:#e2e8f0;color:var(--text-muted);">← Sebelumnya</button>
+              <button type="button" class="btn btn-primary" id="nextBtn">Selanjutnya →</button>
+              <button type="submit" class="btn btn-primary" id="submitBtn" style="display:none;">🚀 Kirim Pendaftaran</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- CEK STATUS -->
+        <div class="tab-content" id="ppdb-status">
+          <div class="form-card" style="max-width:500px;margin:0 auto;">
+            <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:.5rem;">🔍 Cek Status Pendaftaran</h3>
+            <p style="font-size:.88rem;color:var(--text-muted);margin-bottom:1.5rem;">Masukkan nomor pendaftaran yang Anda terima via WhatsApp.</p>
+            <form id="statusCheckForm">
+              <div class="form-group" style="margin-bottom:1rem;">
+                <label class="form-label">Nomor Pendaftaran <span>*</span></label>
+                <input type="text" class="form-input" id="noPendaftaran" placeholder="Contoh: DF-2025-SDIT-0001" required/>
+                <div class="form-hint">Format: DF-TAHUN-PROGRAM-NOMER (contoh: DF-2025-SDIT-0001)</div>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Cek Status</button>
+            </form>
+            <div class="status-result" id="statusResult"></div>
+          </div>
+        </div>
+
+        <!-- INFO PPDB -->
+        <div class="tab-content" id="ppdb-info">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;">
+            <div class="form-card">
+              <div style="font-size:1.75rem;margin-bottom:.75rem;">📅</div>
+              <h3 style="font-size:1rem;font-weight:700;margin-bottom:1rem;">Jadwal PPDB 2025/2026</h3>
+              <table style="width:100%;font-size:.85rem;border-collapse:collapse;">
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                  <td style="padding:.5rem 0;color:var(--text-muted);">Buka Pendaftaran</td>
+                  <td style="padding:.5rem 0;font-weight:600;text-align:right;">1 Mei 2025</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                  <td style="padding:.5rem 0;color:var(--text-muted);">Tutup Pendaftaran</td>
+                  <td style="padding:.5rem 0;font-weight:600;text-align:right;">30 Juni 2025</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                  <td style="padding:.5rem 0;color:var(--text-muted);">Pengumuman</td>
+                  <td style="padding:.5rem 0;font-weight:600;text-align:right;">15 Juli 2025</td>
+                </tr>
+                <tr>
+                  <td style="padding:.5rem 0;color:var(--text-muted);">Daftar Ulang</td>
+                  <td style="padding:.5rem 0;font-weight:600;text-align:right;">16–20 Juli 2025</td>
+                </tr>
+              </table>
+            </div>
+            <div class="form-card">
+              <div style="font-size:1.75rem;margin-bottom:.75rem;">📋</div>
+              <h3 style="font-size:1rem;font-weight:700;margin-bottom:1rem;">Persyaratan Umum</h3>
+              <ul style="display:flex;flex-direction:column;gap:.5rem;font-size:.85rem;">
+                <li style="display:flex;gap:.5rem;"><span style="color:var(--primary);font-weight:700;">✓</span> Fotokopi Akta Kelahiran</li>
+                <li style="display:flex;gap:.5rem;"><span style="color:var(--primary);font-weight:700;">✓</span> Fotokopi Kartu Keluarga</li>
+                <li style="display:flex;gap:.5rem;"><span style="color:var(--primary);font-weight:700;">✓</span> Fotokopi KTP Orang Tua</li>
+                <li style="display:flex;gap:.5rem;"><span style="color:var(--primary);font-weight:700;">✓</span> Foto 3×4 latar merah (3 lembar)</li>
+                <li style="display:flex;gap:.5rem;"><span style="color:var(--primary);font-weight:700;">✓</span> Ijazah/SKTL (untuk SDIT & Ponpes)</li>
+              </ul>
+            </div>
+            <div class="form-card">
+              <div style="font-size:1.75rem;margin-bottom:.75rem;">🏫</div>
+              <h3 style="font-size:1rem;font-weight:700;margin-bottom:1rem;">Kuota Penerimaan</h3>
+              <ul style="display:flex;flex-direction:column;gap:.75rem;font-size:.88rem;">
+                <li style="display:flex;justify-content:space-between;align-items:center;">
+                  <span>PAUD</span>
+                  <span style="background:rgba(5,150,105,.1);color:var(--primary-dark);padding:.2rem .65rem;border-radius:99px;font-weight:700;">30 Siswa</span>
+                </li>
+                <li style="display:flex;justify-content:space-between;align-items:center;">
+                  <span>SDIT Alam</span>
+                  <span style="background:rgba(5,150,105,.1);color:var(--primary-dark);padding:.2rem .65rem;border-radius:99px;font-weight:700;">60 Siswa</span>
+                </li>
+                <li style="display:flex;justify-content:space-between;align-items:center;">
+                  <span>Pondok Pesantren</span>
+                  <span style="background:rgba(5,150,105,.1);color:var(--primary-dark);padding:.2rem .65rem;border-radius:99px;font-weight:700;">40 Santri</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2025 Yayasan Darul Furqan Pariaman.</p>
+        <a href="admin/login.html" class="footer-admin-link">Admin Panel</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil Sekolah — Darul Furqan Pariaman</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-logo">DF</div>
+        <div><div class="brand-name">Darul Furqan</div><div class="brand-sub">Pariaman</div></div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="profil.html" class="active">Profil</a></li>
+        <li><a href="ppdb.html" class="nav-highlight">PPDB 2025</a></li>
+        <li><a href="berita.html">Berita</a></li>
+        <li><a href="galeri.html">Galeri</a></li>
+        <li><a href="prestasi.html">Prestasi</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="container page-hero-content">
+      <div class="page-hero-breadcrumb"><a href="index.html">Beranda</a><span>/</span><span>Profil Sekolah</span></div>
+      <h1>Profil <span class="text-gradient">Sekolah</span></h1>
+      <p>Yayasan Darul Furqan Pariaman — berdiri sejak 2018, hadir untuk mewujudkan pendidikan Islam terpadu yang berkualitas di Kota Pariaman, Sumatera Barat.</p>
+    </div>
+  </section>
+
+  <!-- PROFIL CONTENT -->
+  <section class="section-light">
+    <div class="container">
+      <div class="tabs-wrapper" id="profilTabs">
+        <div class="tabs-nav">
+          <button class="tab-btn active" data-tab="visi-misi">Visi & Misi</button>
+          <button class="tab-btn" data-tab="sejarah">Sejarah</button>
+          <button class="tab-btn" data-tab="program">Program Pendidikan</button>
+          <button class="tab-btn" data-tab="struktur">Struktur Organisasi</button>
+          <button class="tab-btn" data-tab="guru">Tenaga Pendidik</button>
+        </div>
+
+        <!-- Visi Misi -->
+        <div class="tab-content active" id="visi-misi">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2rem;">
+            <div class="form-card">
+              <div style="font-size:2rem;margin-bottom:.75rem;">🎯</div>
+              <h2 style="font-size:1.3rem;font-weight:800;color:var(--primary-dark);margin-bottom:1rem;">Visi</h2>
+              <p style="font-size:1rem;font-weight:600;color:var(--text-main);font-style:italic;line-height:1.7;">"Menjadi sekolah Islam terpadu yang unggul, berkarakter, dan berdaya saing di tingkat nasional serta menghasilkan generasi Qurani yang berakhlakul karimah."</p>
+            </div>
+            <div class="form-card">
+              <div style="font-size:2rem;margin-bottom:.75rem;">🚀</div>
+              <h2 style="font-size:1.3rem;font-weight:800;color:var(--primary-dark);margin-bottom:1rem;">Misi</h2>
+              <ul style="list-style:none;display:flex;flex-direction:column;gap:.6rem;">
+                <li style="display:flex;gap:.5rem;align-items:flex-start;font-size:.9rem;">
+                  <span style="color:var(--primary);font-weight:700;margin-top:.05rem;">✓</span>
+                  Menyelenggarakan pendidikan Islam terpadu berkualitas berbasis alam
+                </li>
+                <li style="display:flex;gap:.5rem;align-items:flex-start;font-size:.9rem;">
+                  <span style="color:var(--primary);font-weight:700;margin-top:.05rem;">✓</span>
+                  Membentuk generasi yang berakhlak mulia dan berprestasi
+                </li>
+                <li style="display:flex;gap:.5rem;align-items:flex-start;font-size:.9rem;">
+                  <span style="color:var(--primary);font-weight:700;margin-top:.05rem;">✓</span>
+                  Membangun lingkungan belajar yang kondusif dan menyenangkan
+                </li>
+                <li style="display:flex;gap:.5rem;align-items:flex-start;font-size:.9rem;">
+                  <span style="color:var(--primary);font-weight:700;margin-top:.05rem;">✓</span>
+                  Mengintegrasikan nilai-nilai Islam dalam setiap aspek pembelajaran
+                </li>
+                <li style="display:flex;gap:.5rem;align-items:flex-start;font-size:.9rem;">
+                  <span style="color:var(--primary);font-weight:700;margin-top:.05rem;">✓</span>
+                  Menjalin kerjasama aktif antara sekolah, orang tua, dan masyarakat
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Nilai-nilai -->
+          <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:1rem;">Nilai-Nilai Kami</h3>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;">
+            <div style="text-align:center;background:linear-gradient(135deg,rgba(5,150,105,.08),rgba(5,150,105,.02));border:1px solid rgba(5,150,105,.15);border-radius:16px;padding:1.5rem 1rem;">
+              <div style="font-size:2rem;margin-bottom:.5rem;">🕌</div>
+              <div style="font-weight:700;font-size:.9rem;">Islami</div>
+            </div>
+            <div style="text-align:center;background:linear-gradient(135deg,rgba(5,150,105,.08),rgba(5,150,105,.02));border:1px solid rgba(5,150,105,.15);border-radius:16px;padding:1.5rem 1rem;">
+              <div style="font-size:2rem;margin-bottom:.5rem;">🌿</div>
+              <div style="font-weight:700;font-size:.9rem;">Alam</div>
+            </div>
+            <div style="text-align:center;background:linear-gradient(135deg,rgba(5,150,105,.08),rgba(5,150,105,.02));border:1px solid rgba(5,150,105,.15);border-radius:16px;padding:1.5rem 1rem;">
+              <div style="font-size:2rem;margin-bottom:.5rem;">⭐</div>
+              <div style="font-weight:700;font-size:.9rem;">Prestasi</div>
+            </div>
+            <div style="text-align:center;background:linear-gradient(135deg,rgba(5,150,105,.08),rgba(5,150,105,.02));border:1px solid rgba(5,150,105,.15);border-radius:16px;padding:1.5rem 1rem;">
+              <div style="font-size:2rem;margin-bottom:.5rem;">🤝</div>
+              <div style="font-weight:700;font-size:.9rem;">Kolaborasi</div>
+            </div>
+            <div style="text-align:center;background:linear-gradient(135deg,rgba(5,150,105,.08),rgba(5,150,105,.02));border:1px solid rgba(5,150,105,.15);border-radius:16px;padding:1.5rem 1rem;">
+              <div style="font-size:2rem;margin-bottom:.5rem;">💡</div>
+              <div style="font-weight:700;font-size:.9rem;">Inovasi</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sejarah -->
+        <div class="tab-content" id="sejarah">
+          <div class="form-card" style="max-width:800px;">
+            <h2 style="font-size:1.3rem;font-weight:800;margin-bottom:1.5rem;">Sejarah Berdirinya Yayasan</h2>
+            <div style="position:relative;padding-left:2rem;border-left:3px solid var(--primary);">
+              <div style="margin-bottom:2rem;position:relative;">
+                <div style="position:absolute;left:-2.55rem;top:.2rem;width:16px;height:16px;background:var(--primary);border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 2px var(--primary);"></div>
+                <div style="font-size:.8rem;color:var(--primary);font-weight:700;margin-bottom:.3rem;">2018</div>
+                <h3 style="font-size:1rem;font-weight:700;margin-bottom:.4rem;">Pendirian Yayasan Darul Furqan</h3>
+                <p style="font-size:.9rem;color:var(--text-muted);">Yayasan Darul Furqan Pariaman didirikan dengan visi membangun lembaga pendidikan Islam terpadu yang berkualitas di Kota Pariaman, Sumatera Barat. Berawal dari semangat komunitas Muslim setempat yang ingin memberikan pilihan pendidikan terbaik untuk generasi penerus.</p>
+              </div>
+              <div style="margin-bottom:2rem;position:relative;">
+                <div style="position:absolute;left:-2.55rem;top:.2rem;width:16px;height:16px;background:var(--primary);border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 2px var(--primary);"></div>
+                <div style="font-size:.8rem;color:var(--primary);font-weight:700;margin-bottom:.3rem;">2019</div>
+                <h3 style="font-size:1rem;font-weight:700;margin-bottom:.4rem;">Pembukaan PAUD & SDIT Alam</h3>
+                <p style="font-size:.9rem;color:var(--text-muted);">Program PAUD dan SDIT Alam mulai dibuka dengan konsep pembelajaran berbasis alam yang memadukan kurikulum nasional dengan nilai-nilai Islam. Sambutan masyarakat sangat positif.</p>
+              </div>
+              <div style="margin-bottom:2rem;position:relative;">
+                <div style="position:absolute;left:-2.55rem;top:.2rem;width:16px;height:16px;background:var(--primary);border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 2px var(--primary);"></div>
+                <div style="font-size:.8rem;color:var(--primary);font-weight:700;margin-bottom:.3rem;">2021</div>
+                <h3 style="font-size:1rem;font-weight:700;margin-bottom:.4rem;">Pembangunan Pondok Pesantren</h3>
+                <p style="font-size:.9rem;color:var(--text-muted);">Asrama santri dan fasilitas pondok pesantren mulai dibangun untuk memperluas layanan pendidikan Islam secara menyeluruh dan terpadu.</p>
+              </div>
+              <div style="position:relative;">
+                <div style="position:absolute;left:-2.55rem;top:.2rem;width:16px;height:16px;background:var(--primary);border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 2px var(--primary);"></div>
+                <div style="font-size:.8rem;color:var(--primary);font-weight:700;margin-bottom:.3rem;">2025</div>
+                <h3 style="font-size:1rem;font-weight:700;margin-bottom:.4rem;">Digitalisasi & Transformasi</h3>
+                <p style="font-size:.9rem;color:var(--text-muted);">Peluncuran website resmi dan sistem PPDB online sebagai wujud komitmen yayasan dalam mengadopsi teknologi informasi untuk meningkatkan layanan dan keterjangkauan informasi kepada masyarakat luas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Program -->
+        <div class="tab-content" id="program">
+          <div class="cards-grid-3">
+            <div class="program-card">
+              <div class="program-icon">🌱</div>
+              <h3>PAUD Darul Furqan</h3>
+              <p>Pendidikan Anak Usia Dini dengan metode fun learning berbasis Islam untuk anak usia 3–6 tahun. Menstimulasi tumbuh kembang kognitif, emosional, dan spiritual secara optimal.</p>
+              <div class="program-tags">
+                <span class="tag">Usia 3–6 Tahun</span>
+                <span class="tag">Fun Learning</span>
+                <span class="tag">Sentra Bermain</span>
+              </div>
+              <div style="font-size:.88rem;color:var(--text-muted);margin-top:.75rem;border-top:1px solid #e2e8f0;padding-top:.75rem;">
+                <strong>Kapasitas:</strong> 30 siswa/tahun ajaran
+              </div>
+            </div>
+            <div class="program-card featured">
+              <div class="program-badge-card">Unggulan</div>
+              <div class="program-icon">📚</div>
+              <h3>SDIT Alam Darul Furqan</h3>
+              <p>Sekolah Dasar Islam Terpadu berbasis alam yang memadukan kurikulum Kemendikbud dengan program tahfidz Al-Quran, bahasa Arab, dan pembelajaran STEAM yang inovatif.</p>
+              <div class="program-tags">
+                <span class="tag">Kelas 1–6</span>
+                <span class="tag">Tahfidz</span>
+                <span class="tag">STEAM</span>
+                <span class="tag">Bahasa Arab</span>
+              </div>
+              <div style="font-size:.88rem;color:rgba(255,255,255,.7);margin-top:.75rem;border-top:1px solid rgba(255,255,255,.15);padding-top:.75rem;">
+                <strong>Kapasitas:</strong> 60 siswa/tahun ajaran
+              </div>
+            </div>
+            <div class="program-card">
+              <div class="program-icon">🕌</div>
+              <h3>Pondok Pesantren</h3>
+              <p>Pondok pesantren modern dengan program tahfidz Al-Quran 30 juz, kajian kitab kuning, pendidikan formal yang terintegrasi, dan pembentukan karakter Islami.</p>
+              <div class="program-tags">
+                <span class="tag">Tahfidz 30 Juz</span>
+                <span class="tag">Boarding</span>
+                <span class="tag">Kitab Kuning</span>
+              </div>
+              <div style="font-size:.88rem;color:var(--text-muted);margin-top:.75rem;border-top:1px solid #e2e8f0;padding-top:.75rem;">
+                <strong>Kapasitas:</strong> 40 santri/tahun ajaran
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Struktur -->
+        <div class="tab-content" id="struktur">
+          <div class="form-card">
+            <h2 style="font-size:1.2rem;font-weight:800;margin-bottom:2rem;text-align:center;">Struktur Organisasi Yayasan Darul Furqan Pariaman</h2>
+            <div style="text-align:center;max-width:700px;margin:0 auto;">
+              <div style="background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;border-radius:12px;padding:1rem 2rem;display:inline-block;font-weight:700;margin-bottom:2rem;">Ketua Yayasan</div>
+              <div style="width:2px;height:30px;background:var(--primary);margin:0 auto;"></div>
+              <div style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1rem;">
+                <div style="display:flex;flex-direction:column;align-items:center;">
+                  <div style="background:rgba(5,150,105,.1);border:2px solid var(--primary-light);border-radius:10px;padding:.75rem 1.5rem;font-weight:700;font-size:.9rem;color:var(--primary-dark);white-space:nowrap;">Sekretaris</div>
+                </div>
+                <div style="display:flex;flex-direction:column;align-items:center;">
+                  <div style="background:rgba(5,150,105,.1);border:2px solid var(--primary-light);border-radius:10px;padding:.75rem 1.5rem;font-weight:700;font-size:.9rem;color:var(--primary-dark);white-space:nowrap;">Bendahara</div>
+                </div>
+              </div>
+              <div style="width:2px;height:20px;background:var(--primary);margin:0 auto .75rem;"></div>
+              <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+                <div style="background:#f8fafc;border:1.5px solid #e2e8f0;border-radius:10px;padding:.65rem 1.25rem;font-size:.88rem;font-weight:600;">Kepala PAUD</div>
+                <div style="background:#f8fafc;border:1.5px solid #e2e8f0;border-radius:10px;padding:.65rem 1.25rem;font-size:.88rem;font-weight:600;">Kepala SDIT</div>
+                <div style="background:#f8fafc;border:1.5px solid #e2e8f0;border-radius:10px;padding:.65rem 1.25rem;font-size:.88rem;font-weight:600;">Pimpinan Ponpes</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Guru -->
+        <div class="tab-content" id="guru">
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.25rem;">
+            <div class="form-card" style="text-align:center;">
+              <div style="width:72px;height:72px;background:linear-gradient(135deg,var(--primary-light),var(--primary-dark));border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.75rem;">👨‍🏫</div>
+              <h3 style="font-size:.95rem;font-weight:700;">Ustadz Hidayat, S.Pd.I</h3>
+              <p style="font-size:.82rem;color:var(--primary);font-weight:600;margin-bottom:.3rem;">Kepala Sekolah</p>
+              <p style="font-size:.8rem;color:var(--text-muted);">S1 Pendidikan Islam • Bergabung 2018</p>
+            </div>
+            <div class="form-card" style="text-align:center;">
+              <div style="width:72px;height:72px;background:linear-gradient(135deg,#818cf8,#6366f1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.75rem;">👩‍🏫</div>
+              <h3 style="font-size:.95rem;font-weight:700;">Ustadzah Rahma, S.Pd</h3>
+              <p style="font-size:.82rem;color:var(--primary);font-weight:600;margin-bottom:.3rem;">Guru Kelas 1</p>
+              <p style="font-size:.8rem;color:var(--text-muted);">S1 PGSD • Bergabung 2019</p>
+            </div>
+            <div class="form-card" style="text-align:center;">
+              <div style="width:72px;height:72px;background:linear-gradient(135deg,#fb923c,#f97316);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.75rem;">👩‍🏫</div>
+              <h3 style="font-size:.95rem;font-weight:700;">Ustadzah Fatimah, S.Pd.I</h3>
+              <p style="font-size:.82rem;color:var(--primary);font-weight:600;margin-bottom:.3rem;">Guru Al-Quran</p>
+              <p style="font-size:.8rem;color:var(--text-muted);">S1 PAI • Bergabung 2020</p>
+            </div>
+            <div class="form-card" style="text-align:center;">
+              <div style="width:72px;height:72px;background:linear-gradient(135deg,#34d399,#059669);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.75rem;">👨‍🏫</div>
+              <h3 style="font-size:.95rem;font-weight:700;">Ustadz Arif, S.Pd</h3>
+              <p style="font-size:.82rem;color:var(--primary);font-weight:600;margin-bottom:.3rem;">Guru PAUD</p>
+              <p style="font-size:.8rem;color:var(--text-muted);">S1 PAUD • Bergabung 2021</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2025 Yayasan Darul Furqan Pariaman.</p>
+        <a href="admin/login.html" class="footer-admin-link">Admin Panel</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>
