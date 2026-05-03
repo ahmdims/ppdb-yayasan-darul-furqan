@@ -5,6 +5,120 @@
   <title>Galeri — Darul Furqan Pariaman</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="assets/style.css"/>
+  <style>
+    /* Tambahan gaya untuk pagination simple dan grid kotakan */
+    .pagination-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+    }
+    .pagination-btn {
+      background: white;
+      border: 1.5px solid #e2e8f0;
+      color: #1f2937;
+      font-weight: 500;
+      padding: 0.5rem 1.2rem;
+      border-radius: 2rem;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      transition: all 0.2s;
+    }
+    .pagination-btn:hover:not(:disabled) {
+      background: #2b7a4b;
+      border-color: #2b7a4b;
+      color: white;
+    }
+    .pagination-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .pagination-info {
+      font-weight: 500;
+      color: #4b5563;
+      background: #f3f4f6;
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      font-size: 0.9rem;
+    }
+    .empty-gallery {
+      text-align: center;
+      padding: 3rem;
+      color: #6b7280;
+      grid-column: 1 / -1;
+    }
+    /* Grid kotakan: 3 kolom di desktop, 1 kolom di HP */
+    .galeri-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    /* Card berbentuk kotak (persegi) */
+    .galeri-card {
+      aspect-ratio: 1 / 1;
+      background: white;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+      transition: transform 0.25s, box-shadow 0.25s;
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .galeri-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 25px 40px rgba(0,0,0,0.1);
+    }
+    .galeri-card-placeholder {
+      font-size: 4rem;
+      background: #d1fae5;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.2s;
+    }
+    .galeri-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+      padding: 1.5rem 1rem 0.8rem;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    .galeri-card:hover .galeri-overlay {
+      transform: translateY(0);
+    }
+    .galeri-overlay span {
+      color: white;
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: block;
+      text-align: center;
+    }
+    /* Responsif */
+    @media (max-width: 768px) {
+      .galeri-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      .galeri-card {
+        aspect-ratio: 1 / 1;
+      }
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .galeri-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
 </head>
 <body>
   <nav class="navbar scrolled" id="navbar">
@@ -31,31 +145,175 @@
   <section class="section-light">
     <div class="container">
       <div class="galeri-filter">
-        <button class="filter-btn active">Semua</button>
-        <button class="filter-btn">🏫 Belajar</button>
-        <button class="filter-btn">⚽ Olahraga</button>
-        <button class="filter-btn">🎨 Kesenian</button>
-        <button class="filter-btn">🌿 Berkebun</button>
-        <button class="filter-btn">📖 Quran</button>
-        <button class="filter-btn">🏕️ Outbound</button>
+        <button class="filter-btn active" data-filter="all">Semua</button>
+        <button class="filter-btn" data-filter="Belajar">🏫 Belajar</button>
+        <button class="filter-btn" data-filter="Olahraga">⚽ Olahraga</button>
+        <button class="filter-btn" data-filter="Kesenian">🎨 Kesenian</button>
+        <button class="filter-btn" data-filter="Berkebun">🌿 Berkebun</button>
+        <button class="filter-btn" data-filter="Quran">📖 Quran</button>
+        <button class="filter-btn" data-filter="Outbound">🏕️ Outbound</button>
       </div>
-      <div class="galeri-grid">
-        <div class="galeri-card"><div class="galeri-card-placeholder">🏫</div><div class="galeri-overlay"><span>Kegiatan Belajar Sains</span></div></div>
-        <div class="galeri-card"><div class="galeri-card-placeholder">⚽</div><div class="galeri-overlay"><span>Turnamen Sepak Bola</span></div></div>
-        <div class="galeri-card"><div class="galeri-card-placeholder">🎨</div><div class="galeri-overlay"><span>Pameran Seni Siswa</span></div></div>
-        <div class="galeri-card"><div class="galeri-card-placeholder">🌿</div><div class="galeri-overlay"><span>Program Berkebun</span></div></div>
-        <div class="galeri-card"><div class="galeri-card-placeholder">📖</div><div class="galeri-overlay"><span>Kelas Tahfidz Al-Quran</span></div></div>
-        <div class="galeri-card"><div class="galeri-card-placeholder">🏕️</div><div class="galeri-overlay"><span>Outbound Kelas 5</span></div></div>
-        <div class="galeri-card"><div class="galeri-card-placeholder">🤖</div><div class="galeri-overlay"><span>Lomba Robotik</span></div></div>
-        <div class="galeri-card"><div class="galeri-card-placeholder">🎭</div><div class="galeri-overlay"><span>Pentas Seni Akhir Tahun</span></div></div>
-        <div class="galeri-card"><div class="galeri-card-placeholder">🍳</div><div class="galeri-overlay"><span>Cooking Class</span></div></div>
-        <div class="galeri-card"><div class="galeri-card-placeholder">🏆</div><div class="galeri-overlay"><span>Wisuda Tahfidz</span></div></div>
-        <div class="galeri-card"><div class="galeri-card-placeholder">🧪</div><div class="galeri-overlay"><span>Eksperimen Sains</span></div></div>
-        <div class="galeri-card"><div class="galeri-card-placeholder">📸</div><div class="galeri-overlay"><span>Foto Bersama Guru</span></div></div>
-      </div>
+      <div class="galeri-grid" id="galeriGrid"></div>
+      <div id="paginationContainer" class="pagination-wrapper"></div>
     </div>
   </section>
   <footer class="footer"><div class="container"><div class="footer-bottom"><p>© 2025 Yayasan Darul Furqan Pariaman.</p><a href="admin/login.html" class="footer-admin-link">Admin Panel</a></div></div></footer>
-  <script src="assets/main.js"></script>
+
+  <script>
+    // ======================= KONTEN GALERI (27 item) =======================
+    const galeriData = [
+      { title: "Kegiatan Belajar Sains Interaktif", category: "Belajar", emoji: "🔬" },
+      { title: "Turnamen Sepak Bola Antar Kelas", category: "Olahraga", emoji: "⚽" },
+      { title: "Pameran Seni Lukis Siswa", category: "Kesenian", emoji: "🎨" },
+      { title: "Program Berkebun Hidroponik", category: "Berkebun", emoji: "🌱" },
+      { title: "Kelas Tahfidz Al-Quran", category: "Quran", emoji: "📖" },
+      { title: "Outbound Kelas 5 di Alam Terbuka", category: "Outbound", emoji: "🏕️" },
+      { title: "Lomba Robotik & Coding", category: "Belajar", emoji: "🤖" },
+      { title: "Pentas Seni Akhir Tahun", category: "Kesenian", emoji: "🎭" },
+      { title: "Cooking Class Sehat & Kreatif", category: "Belajar", emoji: "🍳" },
+      { title: "Wisuda Tahfidz 30 Juz", category: "Quran", emoji: "🏆" },
+      { title: "Eksperimen Roket Air", category: "Belajar", emoji: "🧪" },
+      { title: "Foto Bersama Dewan Guru", category: "Belajar", emoji: "📸" },
+      { title: "Lomba Adzan & Tilawah", category: "Quran", emoji: "🕌" },
+      { title: "Ekskul Pencak Silat", category: "Olahraga", emoji: "🥋" },
+      { title: "Kelas Membatik Nusantara", category: "Kesenian", emoji: "🎨" },
+      { title: "Panen Raya Sayur Organik", category: "Berkebun", emoji: "🥬" },
+      { title: "Fun Bike & Jambore Sehat", category: "Olahraga", emoji: "🚴" },
+      { title: "Camping Ground & Api Unggun", category: "Outbound", emoji: "🔥" },
+      { title: "Olimpiade Matematika", category: "Belajar", emoji: "🧮" },
+      { title: "Karnaval Budaya", category: "Kesenian", emoji: "🎉" },
+      { title: "Pelatihan Jurnalistik", category: "Belajar", emoji: "📝" },
+      { title: "Berkebun di Lahan Sekolah", category: "Berkebun", emoji: "🌻" },
+      { title: "Seminar Parenting", category: "Belajar", emoji: "👪" },
+      { title: "Outbound Flying Fox", category: "Outbound", emoji: "🧗" },
+      { title: "Lomba Cerdas Cermat", category: "Belajar", emoji: "🧠" },
+      { title: "Praktek Sholat Dhuha", category: "Quran", emoji: "🕌" },
+      { title: "Bazar Amal Siswa", category: "Kegiatan", emoji: "🛍️" }
+    ];
+
+    // Konfigurasi: 9 item per halaman
+    const ITEMS_PER_PAGE = 9;
+    let currentFilter = "all";
+    let currentPage = 1;
+
+    const galeriGrid = document.getElementById("galeriGrid");
+    const paginationContainer = document.getElementById("paginationContainer");
+    const filterBtns = document.querySelectorAll(".filter-btn");
+
+    function getFilteredData() {
+      if (currentFilter === "all") return [...galeriData];
+      return galeriData.filter(item => item.category === currentFilter);
+    }
+
+    function renderGallery() {
+      const filtered = getFilteredData();
+      const totalItems = filtered.length;
+      const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
+
+      if (totalPages > 0 && currentPage > totalPages) currentPage = totalPages;
+      if (currentPage < 1) currentPage = 1;
+
+      const start = (currentPage - 1) * ITEMS_PER_PAGE;
+      const end = start + ITEMS_PER_PAGE;
+      const pageItems = filtered.slice(start, end);
+
+      if (totalItems === 0) {
+        galeriGrid.innerHTML = `<div class="empty-gallery">✨ Belum ada dokumentasi untuk kategori ini.</div>`;
+        paginationContainer.innerHTML = "";
+        return;
+      }
+
+      let html = "";
+      pageItems.forEach(item => {
+        html += `
+          <div class="galeri-card">
+            <div class="galeri-card-placeholder">${item.emoji}</div>
+            <div class="galeri-overlay"><span>${item.title}</span></div>
+          </div>
+        `;
+      });
+      galeriGrid.innerHTML = html;
+      renderSimplePagination(totalPages);
+    }
+
+    // Pagination sederhana: hanya Previous, indikator halaman, Next
+    function renderSimplePagination(totalPages) {
+      if (totalPages <= 1) {
+        paginationContainer.innerHTML = "";
+        return;
+      }
+
+      const prevDisabled = currentPage === 1;
+      const nextDisabled = currentPage === totalPages;
+
+      const pagHtml = `
+        <button class="pagination-btn" id="prevPageBtn" ${prevDisabled ? 'disabled' : ''}>‹ Sebelumnya</button>
+        <span class="pagination-info">Halaman ${currentPage} dari ${totalPages}</span>
+        <button class="pagination-btn" id="nextPageBtn" ${nextDisabled ? 'disabled' : ''}>Selanjutnya ›</button>
+      `;
+      paginationContainer.innerHTML = pagHtml;
+
+      document.getElementById("prevPageBtn")?.addEventListener("click", () => {
+        if (currentPage > 1) {
+          currentPage--;
+          renderGallery();
+          document.querySelector(".galeri-grid")?.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+
+      document.getElementById("nextPageBtn")?.addEventListener("click", () => {
+        const filtered = getFilteredData();
+        const total = Math.ceil(filtered.length / ITEMS_PER_PAGE);
+        if (currentPage < total) {
+          currentPage++;
+          renderGallery();
+          document.querySelector(".galeri-grid")?.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    }
+
+    function setFilter(filterValue) {
+      currentFilter = filterValue;
+      currentPage = 1;
+      renderGallery();
+      filterBtns.forEach(btn => {
+        const btnFilter = btn.getAttribute("data-filter");
+        if ((filterValue === "all" && btnFilter === "all") || btnFilter === filterValue) {
+          btn.classList.add("active");
+        } else {
+          btn.classList.remove("active");
+        }
+      });
+    }
+
+    function initFilters() {
+      filterBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+          setFilter(btn.getAttribute("data-filter"));
+        });
+      });
+    }
+
+    function initMobileMenu() {
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('navLinks');
+      if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
+      }
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) navbar.classList.add('scrolled');
+        else navbar.classList.remove('scrolled');
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      initFilters();
+      renderGallery();
+      initMobileMenu();
+    });
+  </script>
 </body>
 </html>
