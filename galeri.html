@@ -4,6 +4,7 @@
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Galeri — Darul Furqan Pariaman</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/vendor/aos.min.css"/>
   <link rel="stylesheet" href="assets/style.css"/>
   <style>
     /* Gaya tambahan untuk pagination (tidak mengubah struktur utama) */
@@ -67,14 +68,14 @@
   <section class="page-hero">
     <div class="page-hero-bg"></div>
     <div class="container page-hero-content">
-      <div class="page-hero-breadcrumb"><a href="index.html">Beranda</a><span>/</span><span>Galeri</span></div>
-      <h1>Galeri <span class="text-gradient">Kegiatan</span></h1>
-      <p>Dokumentasi momen-momen berkesan dari berbagai kegiatan belajar dan ekstrakurikuler Yayasan Darul Furqan Pariaman.</p>
+      <div class="page-hero-breadcrumb" data-aos="fade-up"><a href="index.html">Beranda</a><span>/</span><span>Galeri</span></div>
+      <h1 data-aos="fade-up" data-aos-delay="100">Galeri <span class="text-gradient">Kegiatan</span></h1>
+      <p data-aos="fade-up" data-aos-delay="180">Dokumentasi momen-momen berkesan dari berbagai kegiatan belajar dan ekstrakurikuler Yayasan Darul Furqan Pariaman.</p>
     </div>
   </section>
   <section class="section-light">
     <div class="container">
-      <div class="galeri-filter">
+      <div class="galeri-filter" data-aos="fade-up">
         <button class="filter-btn active" data-filter="all">Semua</button>
         <button class="filter-btn" data-filter="Belajar">Belajar</button>
         <button class="filter-btn" data-filter="Olahraga">Olahraga</button>
@@ -147,6 +148,8 @@
     </div>
   </footer>
 
+  <script src="assets/vendor/aos.min.js"></script>
+  <script src="assets/main.js"></script>
   <script>
     // ======================= DATA GALERI (27 KONTEN) =======================
     const galleryData = [
@@ -210,14 +213,15 @@
       if (totalItems === 0) {
         galeriGrid.innerHTML = `<div class="empty-gallery">✨ Belum ada dokumentasi untuk kategori ini.</div>`;
         paginationContainer.innerHTML = "";
+          if (window.AOS) window.AOS.refreshHard();
         return;
       }
 
       // Buat kartu galeri
       let cardsHtml = "";
-      itemsToShow.forEach(item => {
+      itemsToShow.forEach((item, index) => {
         cardsHtml += `
-          <div class="galeri-card">
+          <div class="galeri-card" data-aos="fade-up" data-aos-delay="${index * 80}">
             <img src="${item.imgUrl}" class="galeri-card-placeholder" alt="${item.title}" loading="lazy" />
             <div class="galeri-overlay"><span>${item.title}</span></div>
           </div>
@@ -225,6 +229,7 @@
       });
       galeriGrid.innerHTML = cardsHtml;
       renderSimplePagination(totalPages);
+        if (window.AOS) window.AOS.refreshHard();
     }
 
     // Pagination sederhana: tombol Prev, indikator, Next (tidak ada deretan angka)

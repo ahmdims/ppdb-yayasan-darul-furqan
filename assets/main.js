@@ -276,6 +276,23 @@ if (sidebarToggle && adminSidebar) {
   }
 }
 
+window.addEventListener('DOMContentLoaded', () => {
+  const pageName = window.location.pathname.split('/').pop();
+  const isHomePage = pageName === 'index.html' || pageName === '';
+  const isProfilPage = pageName === 'profil.html';
+  const isBeritaPage = pageName === 'berita.html';
+  const isPrestasiPage = pageName === 'prestasi.html';
+  const isGaleriPage = pageName === 'galeri.html';
+  if ((!isHomePage && !isProfilPage && !isBeritaPage && !isPrestasiPage && !isGaleriPage) || !window.AOS) return;
+
+  window.AOS.init({
+    once: true,
+    duration: 850,
+    offset: 80,
+    easing: 'ease-out-cubic'
+  });
+});
+
 // Smooth page entrance
 document.body.style.opacity = '0';
 window.addEventListener('DOMContentLoaded', () => {
